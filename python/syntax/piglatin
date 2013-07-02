@@ -1,0 +1,22 @@
+'''
+Created on Jun 30, 2013
+
+@author: jillian
+'''
+pyg = 'ay'
+
+original = raw_input('Enter a word:')
+vowel = ["a","e","i","o","u"]
+
+if len(original) > 0 and original.isalpha(): #checks if alphanumeric elements are entered
+    word = original.lower() #converts entry to all lowercase
+    first = word[0] #takes the first letter in the word
+    
+    if first in vowel: #if the first letter is a vowel, adds "ay" to end and prints
+        new_word = word + pyg
+        print new_word
+    else: #if the first letter is a consonant, moves the first letter to the end of the word and adds "ay"
+        new_word = word[1:] + word[0:1] + pyg
+        print new_word
+else:
+    print 'empty'
